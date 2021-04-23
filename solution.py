@@ -155,8 +155,8 @@ def get_route(hostname):
                     # Fill in end
                 else:
                     # Fill in start
-                     tracelist1.append("error")
-                     tracelist2.append("error")
+                    tracelist1.append("error")
+                    tracelist2.append("error")
                     # Fill in end
                 break
             finally:
