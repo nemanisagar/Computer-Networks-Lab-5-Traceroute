@@ -76,8 +76,8 @@ def get_route(hostname):
     tracelist2 = []  # This is your list to contain all traces
 
     for ttl in range(1, MAX_HOPS):
-        for tries in range(TRIES)
-        destAddr = gethostbyname(hostname)
+        for tries in range(TRIES):
+            destAddr = gethostbyname(hostname)
 
             # Fill in start
             icmp = getprotobyname("icmp")
@@ -117,7 +117,7 @@ def get_route(hostname):
                 # Fill in start
                 # Fetch the icmp type from the IP packet
                 icmpHeader = recvPacket[20:28]
-                types, code, checksum, packetID, sequence = struct.unpack("bbHHh", icmpHeader)
+                types, code, mychecksum, packetID, sequence = struct.unpack("bbHHh", icmpHeader)
                 # Fill in end
                 try:  # try to fetch the hostname
                     # Fill in start
@@ -160,7 +160,7 @@ def get_route(hostname):
             finally:
                 mySocket.close()
 
-        # print(" ".join(tracelist1))
+        #print(" ".join(tracelist1))
     return (tracelist2)
 
-# get_route("www.google.com")
+#get_route("google.com")
