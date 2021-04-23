@@ -78,7 +78,8 @@ def get_route(hostname):
     for ttl in range(1, MAX_HOPS):
         for tries in range(TRIES):
             destAddr = gethostbyname(hostname)
-
+            tracelist1 = []
+            tracelist1.append(str(ttl))
             # Fill in start
             icmp = getprotobyname("icmp")
             # mySocket = socket.socket(socket.AF_INET, socket.SOCK_RAW, icmp)
