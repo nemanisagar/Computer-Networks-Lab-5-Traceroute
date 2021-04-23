@@ -76,8 +76,8 @@ def get_route(hostname):
     tracelist2 = []  # This is your list to contain all traces
 
     for ttl in range(1, MAX_HOPS):
-        for tries in range(TRIES):
-            destAddr = gethostbyname(hostname)
+        destAddr = gethostbyname(hostname)
+        for tries in range(TRIES)
 
             # Fill in start
             icmp = getprotobyname("icmp")
