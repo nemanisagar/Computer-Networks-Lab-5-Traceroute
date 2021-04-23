@@ -161,6 +161,6 @@ def get_route(hostname):
                 mySocket.close()
 
         #print(" ".join(tracelist1))
-    return (tracelist2)
+    return(tracelist2)
 
 #get_route("google.com")
